@@ -116,7 +116,7 @@
 <body class="bg-surface font-body-md text-on-surface">
 <!-- Top Navigation Bar -->
 <nav class="sticky top-0 w-full z-50" style="background:transparent;">
-<div class="flex justify-between items-center px-md py-sm max-w-container-max mx-auto">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 py-4 w-full">
 <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
 <svg viewBox="72 72 92 92" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
   <clipPath id="sunclip2"><rect x="294" y="72" width="92" height="54"/></clipPath>
@@ -128,17 +128,22 @@
 </svg>
 <span style="font-family:Georgia,serif;font-size:1.1rem;color:white;letter-spacing:0.02em;">travel<em style="color:#C4572E;font-style:italic;">by</em>connor</span>
 </a>
-<div class="hidden md:flex gap-md items-center">
-<a class="text-primary/80 font-medium font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="index.html">Home</a>
-<a class="text-primary/80 font-medium font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="services.html">Services</a>
-<a class="text-primary/80 font-medium font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="blog.html">I Love Life</a>
-<a class="text-primary/80 font-medium font-label-md text-label-md hover:text-secondary transition-colors duration-300" href="about.html">About</a>
-<a class="text-primary dark:text-on-primary-container border-b-2 border-secondary font-bold font-label-md text-label-md" href="contact.html">Contact</a>
-</div>
-
+<div class="hidden md:flex items-center gap-8"><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="index.html">Home</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="services.html">Services</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="blog.html">I Love Life</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="about.html">About</a><a class="text-white font-semibold border-b-2 border-[#C4572E] text-sm tracking-wider" href="contact.html">Contact</a></div>
+<button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+  <span class="block w-6 h-0.5 bg-white"></span>
+  <span class="block w-6 h-0.5 bg-white"></span>
+  <span class="block w-6 h-0.5 bg-white"></span>
+</button>
 </div>
 </nav>
-<main>
+<div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
+<button id="mobile-menu-close" class="absolute top-6 right-6 text-white" aria-label="Close menu"><span class="material-symbols-outlined text-3xl">close</span></button>
+<a class="text-white text-2xl font-semibold" href="index.html">Home</a>
+<a class="text-white text-2xl font-semibold" href="services.html">Services</a>
+<a class="text-white text-2xl font-semibold" href="blog.html">I Love Life</a>
+<a class="text-white text-2xl font-semibold" href="about.html">About</a>
+<a class="text-white text-2xl font-semibold" href="contact.html">Contact</a>
+</div><main>
 <!-- Hero Section with Form and Map Background -->
 <section class="relative min-h-screen flex items-center pt-xl overflow-hidden">
 <!-- Background Image -->
@@ -314,16 +319,17 @@
     </script>
 
 
+
+<script>
+</script>
 <script>
 const btn = document.getElementById('mobile-menu-btn');
 const menu = document.getElementById('mobile-menu');
-const close = document.getElementById('mobile-menu-close');
+const closeBtn = document.getElementById('mobile-menu-close');
 if (btn && menu) {
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  close && close.addEventListener('click', () => menu.classList.add('hidden'));
+  closeBtn && closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 }
-</script>
-<script>
 </script>
 </body></html>

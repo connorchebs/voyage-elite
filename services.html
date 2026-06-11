@@ -115,8 +115,8 @@
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
 <nav class="sticky top-0 w-full z-50" style="background:transparent;">
-<div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-md w-full">
-<h1><a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
+<div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 py-4 w-full">
+<a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
 <svg viewBox="72 72 92 92" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
   <clipPath id="sunclip2"><rect x="294" y="72" width="92" height="54"/></clipPath>
   <circle cx="340" cy="118" r="46" fill="none" stroke="white" stroke-width="2"/>
@@ -126,9 +126,13 @@
   <line x1="320" y1="149" x2="360" y2="149" stroke="white" stroke-width="1"/>
 </svg>
 <span style="font-family:Georgia,serif;font-size:1.1rem;color:white;letter-spacing:0.02em;">travel<em style="color:#C4572E;font-style:italic;">by</em>connor</span>
-</a></h1>
-<div class="hidden md:flex items-center gap-lg"><a class="hover:text-primary transition-colors text-label-md text-white" href="index.html">Home</a><a class="hover:text-primary transition-colors text-label-md text-white" href="services.html">Services</a><a class="font-bold border-b-2 border-secondary text-label-md text-white" href="blog.html">I Love Life</a><a class="hover:text-primary transition-colors text-label-md text-white" href="about.html">About</a><a class="hover:text-primary transition-colors text-label-md text-white" href="contact.html">Contact</a></div>
-<div class="flex items-center gap-md"><button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1 p-2" aria-label="Open menu"><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span></button></div>
+</a>
+<div class="hidden md:flex items-center gap-8"><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="index.html">Home</a><a class="text-white font-semibold border-b-2 border-[#C4572E] text-sm tracking-wider" href="services.html">Services</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="blog.html">I Love Life</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="about.html">About</a><a class="text-white/70 hover:text-white transition-colors text-sm tracking-wider" href="contact.html">Contact</a></div>
+<button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1.5 p-2" aria-label="Open menu">
+  <span class="block w-6 h-0.5 bg-white"></span>
+  <span class="block w-6 h-0.5 bg-white"></span>
+  <span class="block w-6 h-0.5 bg-white"></span>
+</button>
 </div>
 </nav>
 <div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
@@ -277,13 +281,14 @@
 
 
 
+
 <script>
 const btn = document.getElementById('mobile-menu-btn');
 const menu = document.getElementById('mobile-menu');
-const close = document.getElementById('mobile-menu-close');
+const closeBtn = document.getElementById('mobile-menu-close');
 if (btn && menu) {
   btn.addEventListener('click', () => menu.classList.toggle('hidden'));
-  close && close.addEventListener('click', () => menu.classList.add('hidden'));
+  closeBtn && closeBtn.addEventListener('click', () => menu.classList.add('hidden'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 }
 </script>
