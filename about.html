@@ -1,0 +1,349 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Our Heritage | Voyage Elite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#313030",
+                        "tertiary-fixed-dim": "#c9c6c0",
+                        "secondary": "#775a19",
+                        "primary": "#00253b",
+                        "on-tertiary-fixed": "#1c1c18",
+                        "surface-variant": "#e5e2e1",
+                        "surface-container-high": "#eae7e7",
+                        "tertiary-fixed": "#e5e2db",
+                        "on-secondary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "surface-tint": "#366285",
+                        "surface-container": "#f0eded",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-container": "#785a1a",
+                        "secondary-fixed-dim": "#e9c176",
+                        "surface": "#fcf9f8",
+                        "primary-container": "#003b5c",
+                        "primary-fixed-dim": "#a0cbf3",
+                        "error": "#ba1a1a",
+                        "surface-container-low": "#f6f3f2",
+                        "outline": "#72787e",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1c1b1b",
+                        "on-primary-fixed": "#001d31",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#a0cbf3",
+                        "tertiary-container": "#383833",
+                        "on-tertiary-fixed-variant": "#474742",
+                        "on-primary-container": "#7aa5cc",
+                        "on-tertiary-container": "#a3a19b",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "tertiary": "#23231e",
+                        "on-background": "#1c1b1b",
+                        "secondary-fixed": "#ffdea5",
+                        "on-primary-fixed-variant": "#1a4a6c",
+                        "surface-dim": "#dcd9d9",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#fcf9f8",
+                        "primary-fixed": "#cce5ff",
+                        "background": "#fcf9f8",
+                        "on-surface-variant": "#42474e",
+                        "on-secondary-fixed-variant": "#5d4201",
+                        "outline-variant": "#c2c7ce",
+                        "secondary-container": "#fed488",
+                        "on-secondary-fixed": "#261900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "lg": "48px",
+                        "sm": "12px",
+                        "gutter": "24px",
+                        "md": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "xs": "4px",
+                        "xl": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-lg-mobile": ["Noto Serif"],
+                        "display-lg": ["Noto Serif"],
+                        "headline-md": ["Noto Serif"],
+                        "label-sm": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Noto Serif"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["28px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .sepia-effect {
+            filter: sepia(0.4) contrast(1.1) brightness(0.9);
+            transition: filter 0.5s ease;
+        }
+        .sepia-effect:hover {
+            filter: sepia(0) contrast(1) brightness(1);
+        }
+        .text-shadow-hero {
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-transparent transition-all duration-500" id="main-nav">
+<div class="flex justify-between items-center px-md py-sm max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-on-primary-container">
+                Voyage Elite
+            </div>
+<div class="hidden md:flex items-center gap-lg">
+<a class="text-primary/80 dark:text-on-primary-container/80 font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300" href="index.html">Home</a>
+<a class="text-primary/80 dark:text-on-primary-container/80 font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300" href="services.html">Services</a>
+<a class="text-primary/80 dark:text-on-primary-container/80 font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300" href="blog.html">I Love Life</a>
+<a class="text-primary dark:text-on-primary-container border-b-2 border-secondary font-bold hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300" href="about.html">About</a>
+<a class="text-primary/80 dark:text-on-primary-container/80 font-medium hover:text-secondary dark:hover:text-secondary-fixed-dim transition-colors duration-300" href="contact.html">Contact</a>
+</div>
+
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Heritage Voyage" class="w-full h-full object-cover sepia-effect" data-alt="A grand, historic steamship or classic ocean liner captured in a grainy, sepia-toned vintage photograph style. The vessel cuts through calm, misty waters under a soft morning sun. The aesthetic is one of heritage, prestige, and the golden age of travel, utilizing high contrast and rich textures to evoke a sense of deep history and enduring luxury. Soft, atmospheric lighting creates a dreamlike, aspirational quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1obs3RMIkDeBf0bCnpG2P4kU1T9YR3n1iCWkDmdlIO-DFcfBJ-zO4lsJefiA6Pv4ta5Sof_cfPdUB6i-tKpAO1uOqs3STUNMPjPvcM_KkwvlAZghKBNjLBpr99ncj3B1fgjScojk9yHbC_C6k8S9kcjm7zO6-nb_Zio4pmNmYUkXHpD5PqMi1mVEqIsSE8GtED0T62D9ZP3AtKIJtMiPhTTqRpYBI1DP7OvutuakudvoG_odfYgjZ3zUInC1JqgDcotDmwaC9hZg">
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 text-center px-md max-w-4xl">
+<span class="font-label-md text-secondary uppercase tracking-[0.2em] mb-md block">Legacy of Excellence</span>
+<h1 class="font-display-lg text-display-lg text-white text-shadow-hero mb-lg">Our Heritage</h1>
+<p class="font-body-lg text-body-lg text-white/90 max-w-2xl mx-auto italic">
+                "To travel is to possess the world, but to travel with lineage is to understand it."
+            </p>
+</div>
+<div class="absolute bottom-xl left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-3xl">expand_more</span>
+</div>
+</header>
+<!-- Our Story Section -->
+<section class="py-xl bg-surface transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-md grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="space-y-md">
+<h2 class="font-headline-lg text-headline-lg text-primary">Our Story</h2>
+<div class="w-20 h-1 bg-secondary mb-lg"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    Founded in 1924, Voyage Elite began as a private concierge service for the transatlantic elite. In an era where travel was a grand expedition rather than a mere transit, we established the blueprint for personalized discovery.
+                </p>
+<p class="font-body-md text-body-md text-on-surface-variant/80">
+                    For a century, we have curated journeys that transcend the ordinary. From the Orient Express to the first commercial flights across the Pacific, our heritage is woven into the very fabric of modern exploration. We don't just book trips; we architect legacies of wonder.
+                </p>
+<div class="pt-md">
+<button class="border-2 border-secondary text-secondary px-lg py-sm font-label-md rounded-lg hover:bg-secondary hover:text-white transition-all">
+                        View Historical Archive
+                    </button>
+</div>
+</div>
+<div class="relative aspect-[4/5] rounded-xl overflow-hidden shadow-2xl">
+<img alt="Legacy Artifacts" class="w-full h-full object-cover sepia-effect" data-alt="An elegant, archival-style black and white photograph of a vintage leather trunk and an old brass compass resting on a worn wooden table. Beside them, a pair of classic spectacles and a handwritten travel journal with yellowed pages are visible. The lighting is soft and directional, creating deep shadows and highlighting the rich textures of the leather and metal, suggesting a long history of curated exploration and meticulous planning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtyOngRQc1aHSfnvsnmekWKjXzi3Tm0RKn_T0-KuScXWZOkHol1lMnO2dFmAAZ6CB9otJ5Xh4wA8QL6lSjoObndEM_i9MaDnA2MQjZCli1FhEqZPj9I5uInIAo6WXy2kL8FZOsxYD56WQZbXfifuDcgIrk4wIs_abtvc9KJdJabnWQW8skaYi5KhggSkHICmTM6CrbjNPIyIg4ok77Z8onuc5lpX79l-WyVA_ca03cWDa1a56KBXD9j-2_Ct5UU9j_kXS1aJu0tp0">
+</div>
+</div>
+</section>
+<!-- The Elite Standard (Bento Grid) -->
+<section class="py-xl bg-surface-container-low transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-md">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary">The Elite Standard</h2>
+<p class="font-body-md text-on-surface-variant mt-sm">Three pillars of our century-long commitment to you.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Bento Card 1 -->
+<div class="md:col-span-2 bg-white p-xl rounded-xl shadow-sm flex flex-col justify-between group overflow-hidden relative border border-outline-variant/30">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">verified_user</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Unrivaled Access</h3>
+<p class="font-body-md text-on-surface-variant max-w-md">
+                            Our relationships are our most valuable currency. From private viewings at the Louvre to after-hours access to the Serengeti, we provide the keys to doors others didn't know existed.
+                        </p>
+</div>
+<div class="absolute -right-20 -bottom-20 opacity-5 group-hover:opacity-10 transition-opacity">
+<span class="material-symbols-outlined text-[200px]">key</span>
+</div>
+</div>
+<!-- Bento Card 2 -->
+<div class="bg-primary text-on-primary p-xl rounded-xl shadow-lg flex flex-col justify-center items-center text-center">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl mb-md">history_edu</span>
+<h3 class="font-headline-md text-headline-md mb-sm">Century of Trust</h3>
+<p class="font-label-md opacity-80 uppercase tracking-widest">Since 1924</p>
+</div>
+<!-- Bento Card 3 -->
+<div class="bg-white p-xl rounded-xl shadow-sm border border-outline-variant/30 md:col-span-3 flex flex-col md:flex-row gap-lg items-center">
+<div class="md:w-1/3">
+<span class="material-symbols-outlined text-secondary text-4xl mb-md">architecture</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-sm">Precision Design</h3>
+<p class="font-body-md text-on-surface-variant">
+                            Every itinerary is a custom-built masterpiece, balanced for rhythm, luxury, and spontaneous discovery.
+                        </p>
+</div>
+<div class="md:w-2/3 h-48 w-full bg-surface rounded-lg overflow-hidden relative">
+<img alt="Landscape Grid" class="w-full h-full object-cover grayscale opacity-40" data-alt="A wide, sweeping landscape of mist-covered mountain peaks at dawn, presented in a monochromatic, high-contrast style. The layers of the mountains create a sense of infinite depth and majestic scale. The lighting is ethereal, with soft gradients of grey and white, reflecting the brand's sophisticated and serene aesthetic. The overall mood is one of quiet awe and the vast possibilities of high-end travel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZzWKfuIAx16D_rjscFJxBlyuIJXI_7ZAjEMuAYlbQFOcLIrauXdEEbS1tvXh_hjuvsq8mwBfhPJNZ72wNHen3MNMmMeNOP6CTQzOQ_ofnVqN5VsQv_ja4nHwQEi3dWi6OCIz9q3HLZsPbV4P-bRNqoFNEY0qOZzLiKOeMIX-xaacrr9Eo6pURttqoBxGxQIW15X94ApAbj7ZdKQoG3MC6H9YdxifJJrQWWLfya64NFi7vMXZ2h-2GRlkWk9WOpCpY4r9KHBzPC00">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Meet Our Experts -->
+<section class="py-xl bg-surface transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-container-max mx-auto px-md">
+<h2 class="font-headline-lg text-headline-lg text-primary text-center mb-xl">Meet Our Experts</h2>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<!-- Expert 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-md shadow-md">
+<img alt="Julian Sterling" class="w-full h-full object-cover sepia-effect grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A professional portrait of a senior travel consultant in a bespoke, dark navy suit, standing in a library with floor-to-ceiling bookshelves. The image is rendered in a soft, low-contrast black and white style, emphasizing sophistication and decades of experience. The lighting is warm and cinematic, highlighting the expert's confident yet approachable expression, fitting a heritage travel brand's expert section." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT963NDknQZUGldlT0OxSQx1UdDerbigOr5f5F6T2KMxfjmPnFXrBtmLM4FFdwqCOUVdv4C8fx4NfD-aeK0qYOcrqXwhEUuAVe14CMi0Ts3W9tLH1hIyAyvOndLrgi3IJsM89oGGsfkLsuvY6rmiatHutRYaijz9QFlusWJ51I1yjtPh2uLQ3O0To5JqiqSqDRhEOjiEbyUExYm2K2bw7uAQZfcd3VHwMoYjI5V-uSW0bMvub_k0jmoih3I-8lpFnwNIdUl1HTqsI">
+</div>
+<h4 class="font-headline-md text-[20px] text-primary">Julian Sterling</h4>
+<p class="font-label-sm text-secondary uppercase tracking-wider">Director of Expeditions</p>
+<p class="font-body-md text-on-surface-variant mt-sm line-clamp-2">30 years exploring the Silk Road and Himalayan passages.</p>
+</div>
+<!-- Expert 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-md shadow-md">
+<img alt="Elena Moretti" class="w-full h-full object-cover sepia-effect grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a refined female travel architect wearing elegant attire, captured in a bright, airy architectural space with clean lines. The image is in high-key black and white, giving it a modern corporate yet timeless feel. She has a knowledgeable smile, and the soft daylight creates a gentle glow around her features, evoking trust, professionalism, and a high-end service aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiF3wrS48OQBD9FdUIou7VXPRCIhGor4DwdvTqfFYI3joHgle3XbJ5xjfvI7z-hbY1cTVVl0oKNHybmAfj7uK5ckZHZtFlvkIsWZB_ZdM-Jfo6s-z0-2jOGVgtYynAk2m5aaHHctjirW5KmWk5Glj0apEY2yL566FyqYV-0lqUdLZ7tGIaoRBumrCuEu3VHyGQEyNsw3Bb9z4A2lhH3Bks4CQBWwfIHeLxvivhmN878YddsvpVndvkcTOVubi4XRP3d-TrnLYPd3c">
+</div>
+<h4 class="font-headline-md text-[20px] text-primary">Elena Moretti</h4>
+<p class="font-label-sm text-secondary uppercase tracking-wider">European Curator</p>
+<p class="font-body-md text-on-surface-variant mt-sm line-clamp-2">Former museum director turned luxury cultural architect.</p>
+</div>
+<!-- Expert 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-md shadow-md">
+<img alt="Marcus Thorne" class="w-full h-full object-cover sepia-effect grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A portrait of a male travel expert in classic safari gear, leaning against a vintage Land Rover in a desert setting at dusk. The photograph is processed with a warm sepia tint and slight film grain to emphasize adventure and heritage. The lighting is low and atmospheric, suggesting a deep connection with nature and wild exploration, while maintaining a polished, premium agency look." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTWQMoKw2ete3VVKnr6XGPc2JdcKpeFxW4qxRyguFIQMUY_Q5Jtk3dEsTI2CC4TPiMhigJOb2FZTufWrQrFJdB3ztZ9kn_PL9GSlmm8KcyOAN99I8RT9Gx9oGrc9vDqutuCKDQuQyuSQ8UNq_8XS4rbDugX4vAI3FA0-aDmHaPIH7VqNHcMqT-cWMLzhdsyjLHFEz1Lhzw5FO_vCzfv8G-IH7a4yGvonWglfnJrGSTRjPc4gtJisntyH5Z_z5fgN1AHmO3ZWDt8v0">
+</div>
+<h4 class="font-headline-md text-[20px] text-primary">Marcus Thorne</h4>
+<p class="font-label-sm text-secondary uppercase tracking-wider">Wilderness Specialist</p>
+<p class="font-body-md text-on-surface-variant mt-sm line-clamp-2">The leading authority on private African safaris and conservation.</p>
+</div>
+<!-- Expert 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-[3/4] overflow-hidden rounded-xl mb-md shadow-md">
+<img alt="Sarah Chen" class="w-full h-full object-cover sepia-effect grayscale group-hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated portrait of a female Asian travel expert in professional attire, photographed against a minimalist background with subtle geometric shadows. The black and white palette is crisp and modern, emphasizing precision and high-level organization. The lighting is sharp yet flattering, conveying a persona of high-tech efficiency blended with classic luxury service standards." src="https://lh3.googleusercontent.com/aida-public/AB6AXuByIYkZLZwvXyPS9JFikHgcWHZv1aFIjuEW-eo7OClohrlSeJg55kt71L99Fy1kU5Faso13M-a0E8CFYiG47lOaWC_ZBP01bMthAaShyPzdoRcgiKIEFhxBs3f49ZER3DoIHV4uweDvdLAruxe7IQLdjLPoFxiyMyXRR51l4MyLQQxBHoyUGP46iOqSQHTBeBEpFD5eBuW-tbyKvM8hN2hrDx7yUe8yDpP8bvtI_x5trkftbScYyn3O5jthABzrEzcjY9swmsymdFo">
+</div>
+<h4 class="font-headline-md text-[20px] text-primary">Sarah Chen</h4>
+<p class="font-label-sm text-secondary uppercase tracking-wider">Island Concierge</p>
+<p class="font-body-md text-on-surface-variant mt-sm line-clamp-2">Specialist in secluded archipelagos and private island buyouts.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-xl bg-primary text-on-primary transition-all duration-1000 opacity-100 translate-y-0">
+<div class="max-w-2xl mx-auto text-center px-md">
+<h2 class="font-display-lg text-display-lg mb-md">Begin Your Chapter</h2>
+<p class="font-body-lg mb-lg text-primary-container/80">Every legend starts with a single step. Let us curate yours with a century of expertise.</p>
+<button class="bg-secondary text-white px-xl py-md font-label-md rounded-lg hover:bg-secondary/90 transition-all text-lg shadow-xl">
+                Consult an Expert
+            </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-lg px-xl py-xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-on-primary dark:text-on-primary-container mb-md">Voyage Elite</div>
+<p class="font-body-md text-on-primary/70 dark:text-on-primary-container/70">Curating extraordinary journeys since 1924. Your legacy in exploration starts here.</p>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-md">Navigation</h4>
+<div class="flex flex-col gap-sm">
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="index.html">Home</a>
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="services.html">Services</a>
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Destinations</a>
+<a class="font-label-sm text-secondary dark:text-secondary-fixed hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="about.html">About</a>
+</div>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-md">Support</h4>
+<div class="flex flex-col gap-sm">
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Travel Insurance</a>
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Careers</a>
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Contact Us</a>
+</div>
+</div>
+<div>
+<h4 class="text-on-primary font-bold mb-md">Legal</h4>
+<div class="flex flex-col gap-sm">
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Privacy Policy</a>
+<a class="font-label-sm text-on-primary/70 dark:text-on-primary-container/70 hover:text-on-primary dark:hover:text-on-primary-container underline transition-opacity" href="#">Terms of Service</a>
+</div>
+<div class="mt-lg text-on-primary/40 font-label-sm italic">
+                    © 2024 Voyage Elite. All rights reserved.
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Navigation transparency logic
+        const nav = document.getElementById('main-nav');
+        const logo = nav.querySelector('.text-primary');
+        const links = nav.querySelectorAll('a');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.remove('bg-transparent', 'py-sm');
+                nav.classList.add('bg-white', 'shadow-md', 'py-2');
+                logo.classList.remove('text-primary');
+                logo.classList.add('text-primary-container');
+            } else {
+                nav.classList.add('bg-transparent', 'py-sm');
+                nav.classList.remove('bg-white', 'shadow-md', 'py-2');
+                logo.classList.add('text-primary');
+                logo.classList.remove('text-primary-container');
+            }
+        });
+
+        // Simple reveal animation on scroll
+        const revealElements = document.querySelectorAll('section');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            revealObserver.observe(el);
+        });
+    </script>
+
+
+</body></html>
