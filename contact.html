@@ -115,7 +115,7 @@
 </head>
 <body class="bg-surface font-body-md text-on-surface">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-transparent">
+<nav class="sticky top-0 w-full z-50 shadow-md" style="background-color:#00253b;">
 <div class="flex justify-between items-center px-md py-sm max-w-container-max mx-auto">
 <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
 <svg viewBox="72 72 92 92" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -308,13 +308,7 @@
 
         // Navigation scroll effect
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.replace('bg-transparent', 'bg-surface/90');
-                nav.classList.add('backdrop-blur-md', 'shadow-sm');
-            } else {
-                nav.classList.replace('bg-surface/90', 'bg-transparent');
-                nav.classList.remove('backdrop-blur-md', 'shadow-sm');
+            
             }
         });
     </script>

@@ -114,7 +114,7 @@
 </head>
 <body class="bg-background text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<nav class="w-full top-0 z-50 shadow-sm absolute">
+<nav class="sticky top-0 w-full z-50 shadow-md" style="background-color:#00253b;">
 <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-md w-full">
 <h1><a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
 <svg viewBox="72 72 92 92" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -267,11 +267,7 @@
 
         // Sticky Navbar subtle shadow on scroll
         window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-md');
-            } else {
-                nav.classList.remove('shadow-md');
+            
             }
         });
     </script>
