@@ -167,8 +167,24 @@
 </div>
 <!-- Right: Inquiry Form -->
 <div class="lg:col-span-7">
-<div class="glass-card rounded-xl shadow-xl border border-outline-variant/30 overflow-hidden">
-<iframe src="https://secure.foratravel.com/intake/siRz8xc4y9?utm_source=advisor_profile" title="Travel Inquiry Form" width="100%" height="800" frameborder="0" style="display:block;"></iframe>
+<div class="glass-card p-xl rounded-xl shadow-xl border border-outline-variant/30 flex flex-col items-center justify-center text-center gap-lg min-h-[400px]">
+<span class="material-symbols-outlined text-5xl text-secondary">travel_explore</span>
+<h2 class="font-display-lg text-primary" style="font-family:'Noto Serif',serif;font-size:2rem;font-weight:700;">Begin Your Journey</h2>
+<p class="text-on-surface-variant" style="font-family:'Plus Jakarta Sans',sans-serif;max-width:380px;">Tell us about the world you wish to discover. Our travel experts will craft a bespoke itinerary just for you.</p>
+<button id="open-inquiry-btn" class="bg-primary text-on-primary px-xl py-md rounded-lg font-semibold flex items-center gap-sm hover:bg-primary-container transition-colors duration-300" style="font-family:'Plus Jakarta Sans',sans-serif;">
+  Start Your Inquiry
+  <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+
+<!-- Inquiry Modal -->
+<div id="inquiry-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4" style="background:rgba(0,37,59,0.7);backdrop-filter:blur(4px);">
+<div class="bg-white rounded-xl shadow-2xl w-full max-w-3xl relative overflow-hidden" style="height:90vh;">
+  <button id="close-inquiry-btn" class="absolute top-4 right-4 z-10 bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-md hover:bg-surface-container transition-colors" aria-label="Close">
+    <span class="material-symbols-outlined text-primary">close</span>
+  </button>
+  <iframe src="https://secure.foratravel.com/intake/siRz8xc4y9?utm_source=advisor_profile" title="Travel Inquiry Form" width="100%" height="100%" frameborder="0" style="display:block;border-radius:0.75rem;"></iframe>
 </div>
 </div>
 </div>
@@ -303,5 +319,14 @@ if (btn && menu) {
   close && close.addEventListener('click', () => menu.classList.add('hidden'));
   menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
 }
+</script>
+<script>
+const openBtn = document.getElementById('open-inquiry-btn');
+const closeBtn = document.getElementById('close-inquiry-btn');
+const modal = document.getElementById('inquiry-modal');
+openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+closeBtn.addEventListener('click', () => modal.classList.add('hidden'));
+modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.add('hidden'); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape') modal.classList.add('hidden'); });
 </script>
 </body></html>
