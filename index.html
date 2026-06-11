@@ -118,9 +118,17 @@
 <div class="flex justify-between items-center max-w-container-max mx-auto px-gutter py-md w-full">
 <a class="text-headline-md font-headline-md tracking-tight text-white" href="#">Voyage Elite</a>
 <div class="hidden md:flex items-center gap-lg text-white"><a class="text-on-surface-variant hover:text-primary transition-colors text-label-md" href="index.html">Home</a><a class="text-on-surface-variant hover:text-primary transition-colors text-label-md" href="services.html">Services</a><a class="font-bold border-b-2 border-secondary text-label-md text-white" href="blog.html">I Love Life</a><a class="text-on-surface-variant hover:text-primary transition-colors text-label-md" href="about.html">About</a><a class="text-on-surface-variant hover:text-primary transition-colors text-label-md" href="contact.html">Contact</a></div>
-<div class="flex items-center gap-md"></div>
+<div class="flex items-center gap-md"><button id="mobile-menu-btn" class="md:hidden flex flex-col gap-1 p-2" aria-label="Open menu"><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span><span class="block w-6 h-0.5 bg-white transition-all duration-300"></span></button></div>
 </div>
 </nav>
+<div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
+<button id="mobile-menu-close" class="absolute top-6 right-6 text-white" aria-label="Close menu"><span class="material-symbols-outlined text-3xl">close</span></button>
+<a class="text-white text-2xl font-semibold" href="index.html">Home</a>
+<a class="text-white text-2xl font-semibold" href="services.html">Services</a>
+<a class="text-white text-2xl font-semibold" href="blog.html">I Love Life</a>
+<a class="text-white text-2xl font-semibold" href="about.html">About</a>
+<a class="text-white text-2xl font-semibold" href="contact.html">Contact</a>
+</div>
 <!-- Hero Section -->
 <header class="relative h-[85vh] flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -206,4 +214,14 @@
 
 
 
+<script>
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+const close = document.getElementById('mobile-menu-close');
+if (btn && menu) {
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  close && close.addEventListener('click', () => menu.classList.add('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+}
+</script>
 </body></html>

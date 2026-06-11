@@ -135,6 +135,14 @@
 
 </div>
 </nav>
+<div id="mobile-menu" class="md:hidden hidden fixed inset-0 z-40 bg-primary/95 backdrop-blur-sm flex flex-col items-center justify-center gap-8">
+<button id="mobile-menu-close" class="absolute top-6 right-6 text-white" aria-label="Close menu"><span class="material-symbols-outlined text-3xl">close</span></button>
+<a class="text-white text-2xl font-semibold" href="index.html">Home</a>
+<a class="text-white text-2xl font-semibold" href="services.html">Services</a>
+<a class="text-white text-2xl font-semibold" href="blog.html">I Love Life</a>
+<a class="text-white text-2xl font-semibold" href="about.html">About</a>
+<a class="text-white text-2xl font-semibold" href="contact.html">Contact</a>
+</div>
 <!-- Hero Section -->
 <header class="relative h-screen flex items-center justify-center overflow-hidden">
 <div class="absolute inset-0 z-0">
@@ -346,4 +354,14 @@
     </script>
 
 
+<script>
+const btn = document.getElementById('mobile-menu-btn');
+const menu = document.getElementById('mobile-menu');
+const close = document.getElementById('mobile-menu-close');
+if (btn && menu) {
+  btn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  close && close.addEventListener('click', () => menu.classList.add('hidden'));
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => menu.classList.add('hidden')));
+}
+</script>
 </body></html>
