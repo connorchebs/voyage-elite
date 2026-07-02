@@ -120,7 +120,7 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
 <!-- TopNavBar -->
-<nav class="sticky top-0 w-full z-50" style="background:transparent;">
+<nav class="fixed top-0 w-full z-50" style="background:transparent;">
 <div class="flex justify-between items-center max-w-[1280px] mx-auto px-6 py-4 w-full">
 <a href="index.html" style="display:inline-flex;align-items:center;gap:10px;text-decoration:none;">
 <svg viewBox="72 72 92 92" width="40" height="40" xmlns="http://www.w3.org/2000/svg">
@@ -333,25 +333,6 @@
 </div>
 </footer>
 <script>
-        // Navigation transparency logic
-        const nav = document.getElementById('main-nav');
-        const logo = nav.querySelector('.text-primary');
-        const links = nav.querySelectorAll('a');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                nav.classList.remove('bg-transparent', 'py-sm');
-                nav.classList.add('bg-white', 'shadow-md', 'py-2');
-                logo.classList.remove('text-primary');
-                logo.classList.add('text-primary-container');
-            } else {
-                nav.classList.add('bg-transparent', 'py-sm');
-                nav.classList.remove('bg-white', 'shadow-md', 'py-2');
-                logo.classList.add('text-primary');
-                logo.classList.remove('text-primary-container');
-            }
-        });
-
         // Simple reveal animation on scroll
         const revealElements = document.querySelectorAll('section');
         const revealObserver = new IntersectionObserver((entries) => {
